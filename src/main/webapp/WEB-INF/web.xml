@@ -1,0 +1,73 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+<display-name>Archetype Created Web Application</display-name>
+<welcome-file-list>
+<welcome-file>/WEB-INF/views/userhome.jsp</welcome-file>
+</welcome-file-list>
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/Dispatcher-servlet.xml,/WEB-INF/DbConfig.xml</param-value>
+</context-param>
+<listener><listener-class> org.springframework.web.context.ContextLoaderListener </listener-class></listener>
+<servlet>
+  <servlet-name>Dispatcher</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+  <servlet>
+  	<servlet-name>sample</servlet-name>
+  	<display-name>sample</display-name>
+  	<description></description>
+  	<servlet-class>sample</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Spring</servlet-name>
+  	<display-name>Spring</display-name>
+  	<description></description>
+  	<servlet-class>sample.Spring</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowSupplierController</servlet-name>
+  	<display-name>ShowSupplierController</display-name>
+  	<description></description>
+  	<servlet-class>com.sathya.controller.ShowSupplierController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowSupplierController1</servlet-name>
+  	<display-name>ShowSupplierController1</display-name>
+  	<description></description>
+  	<servlet-class>com.sathya.controller.ShowSupplierController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Suppliercontroller</servlet-name>
+  	<display-name>Suppliercontroller</display-name>
+  	<description></description>
+  	<servlet-class>com.sathya.controller.Suppliercontroller</servlet-class>
+  </servlet>
+<servlet-mapping>
+<servlet-name>Dispatcher</servlet-name>
+<url-pattern>/</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>sample</servlet-name>
+	<url-pattern>/sample</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>Spring</servlet-name>
+	<url-pattern>/Spring</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>ShowSupplierController</servlet-name>
+	<url-pattern>/ShowSupplierController</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>ShowSupplierController1</servlet-name>
+	<url-pattern>/ShowSupplierController1</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>Suppliercontroller</servlet-name>
+	<url-pattern>/Suppliercontroller</url-pattern>
+</servlet-mapping>
+</web-app>
+
