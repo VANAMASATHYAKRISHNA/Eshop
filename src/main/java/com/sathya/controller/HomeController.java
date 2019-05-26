@@ -20,4 +20,20 @@ public String goContactUs()
 {
 	return "ContactUs";
 }
+@RequestMapping("/userhome")
+public String goUserHome()
+{
+	return "userhome";
+}
+@RequestMapping("/userAboutus")
+public String gouserAboutUs()
+{
+	return "AboutUs";
+}
+@RequestMapping("/userContactus")
+public String gouserContactUs()
+{
+	return "ContactUs";
+}
+
 }

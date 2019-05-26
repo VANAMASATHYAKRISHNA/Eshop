@@ -18,24 +18,24 @@ public class CartDaoImpl
 	SessionFactory sessionFactory;
 	public Cart getsavetocart(Product product ,int quantity)
 	{
-	Cart addTOCart=new Cart(); 
+	Cart cart=new Cart(); 
 		Session session=sessionFactory.openSession();
-		if(addTOCart.getCartid()==0)
+		if(cart.getCartid()==0)
 	     {
 	  int cartid=(int)(Math.random()*10000);
-	   addTOCart.setCartid(cartid);
+	   cart.setCartid(cartid);
 	  }
-		addTOCart.setProductId(product.getProductId());
-		addTOCart.setProductName(product.getProductName());
-		addTOCart.setProductPrice(product.getProductPrice());
-		addTOCart.setProductSupplier(product.getProductSupplier());
-		addTOCart.setQuantity(quantity);
-		addTOCart.setTotalprice(addTOCart.getProductPrice()*addTOCart.getQuantity());
-		session.save(addTOCart);
+		cart.setProductId(product.getProductId());
+	    cart.setProductName(product.getProductName());
+		cart.setProductPrice(product.getProductPrice());
+		cart.setProductSupplier(product.getProductSupplier());
+		cart.setQuantity(quantity);
+		cart.setTotalprice(cart.getProductPrice()*cart.getQuantity());
+		session.save(cart);
 	    Transaction transaction	=session.beginTransaction();
 	    transaction.commit();
 	    session.close();
-		return addTOCart;
+		return cart;
 	}
 public List<Cart>	Displaycart()
 {

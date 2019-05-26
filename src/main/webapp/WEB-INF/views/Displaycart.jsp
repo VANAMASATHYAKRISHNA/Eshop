@@ -9,31 +9,45 @@
 <meta charset="ISO-8859-1">
 <title>Display Carts</title>
 </head>
+<table  border="2">
+<tr>
+<th>
+cartid
+</th>
+<th>
+productId
+</th>
+<th>
+productName
+</th>
+<th>
+productPrice
+</th>
+<th>
+productSupplier
+</th>
+<th>
+Quantity
+</th>
+<th>
+Totalprice
+</th>
+<th>
+Product-Image
+</th>
+</tr>
 <body>
-<div class="container-fluid">
-<div class="row">
 <c:forEach items="${cartlist}" var="car">
-<div class="col-sm-2">
-<img src="resources/product-images/${car.productId}.jpg" height="100" width="150"/>
-<br>
-cartid:-${car.cartid}
-<br>
-productId:-${car.productId}
-<br>
-productName:-${car.productName}
-<br>
-productPrice:-${car.productPrice}
-<br>
-productSupplier:-${car.productSupplier}
-<br>
-quantity:-${car.quantity}
-<br>
-totalprice:-${car.totalprice}
-<br>
-</div>
+<tr>
+<td>${car.cartid}</td>
+<td>${car.productId}</td>
+<td>${car.productName}</td>
+<td>${car.productPrice}</td>
+<td>${car.productSupplier}</td>
+<td>${car.quantity}</td>
+<td>${car.totalprice}</td>
+<td><img src="resources/product-images/${car.productId}.jpg" height="100" width="150"/></td></tr>
 </c:forEach>
-</div>
-</div>
-<a href="=${prolist.productId}">BuyNow</a>
+</table>
 </body>
 </html>

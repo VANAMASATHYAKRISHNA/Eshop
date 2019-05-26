@@ -12,19 +12,27 @@
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
    <div class="navbar-header">
-     <a class="navbar-brand" href="#">SK Ocean of Jewellery</a>
-     <a class="navbar-brand" href="#">Aboutus</a>
-     <a class="navbar-brand" href="#">Contactus</a>
-     <a class="navbar-brand" href="DisplayCart">Displaycart</a>
-     <a class="navbar-brand" href="register">Registration</a>
-     <a class="navbar-brand" href="LOGIN">LOGIN</a>
-   </div>
+     <a class="navbar-brand" href="userhome">SK Ocean of Jewellery</a>
+     </div>
    <ul class="nav navbar-nav">
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
        <ul class="dropdown-menu">
          <li><a href="user">Diamonds</a></li>
          <li><a href="user">Gold</a></li>
           </ul>
+      <li class="nav-item">
+       <a class="navbar-brand" href="DisplayCart">Displaycart</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="Registration">Registration</a>
+      <li class="nav-item">
+         <a class="navbar-brand" href="LOGIN">login</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="#">Aboutus</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="#">Contactus</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="logout">logout</a>
+    </li>
           </div>
          </div>
      </nav>

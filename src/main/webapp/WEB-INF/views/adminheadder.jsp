@@ -13,9 +13,7 @@
 <div class="container-fluid">
    <div class="navbar-header">
      <a class="navbar-brand" href="homecontoller">SK OCEAN OF JEWELLERY</a>
-     <a class="navbar-brand" href="Aboutus">Aboutus</a>
-     <a class="navbar-brand" href="Contactus">Contactus</a>
-   </div>
+     </div>
    <ul class="nav navbar-nav">
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Catagories <span class="caret"></span></a>
        <ul class="dropdown-menu">
@@ -32,6 +30,13 @@
          <li><a href="AddProduct">AddProduct's</a></li>
          <li><a href="ShowProduct">ShowProduct's</a></li>
           </ul>
+          <li class="nav-item">
+      <a class="navbar-brand" href="Aboutus">Aboutus</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="Contactus">Contactus</a>
+      <li class="nav-item">
+      <a class="navbar-brand" href="logout">logout</a>
+    </li>
          </div>
          </div>
      

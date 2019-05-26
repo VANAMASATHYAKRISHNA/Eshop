@@ -2,7 +2,7 @@ package com.sathya.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FilterOutputStream;
@@ -61,7 +61,7 @@ List<Supplier> supplierlist=	supplierDaoImpl.getSupplierDaoRetriveData();
 		MultipartFile imag =product.getProimg();
 		System.out.println("testing image="+imag);
 		try {
-			FileOutputStream fileOutputStream=new FileOutputStream("E:\\eclipse-workspace\\eshop\\src\\main\\webapp\\resources\\product-images\\"+product.getProductId()+".jpg");
+			FileOutputStream fileOutputStream=new FileOutputStream("E:/eclipse-workspace/eshop/src/main/webapp/resources/product-images/"+product.getProductId()+".jpg");
 			BufferedOutputStream bufferedOutputStream= new BufferedOutputStream(fileOutputStream);
 byte bytearray[]=imag.getBytes();
 bufferedOutputStream.write(bytearray);
@@ -98,7 +98,7 @@ bufferedOutputStream.write(bytearray);
 	    {
 	  Product product = productDaoImpl.getProduct(productId);
 	  productDaoImpl.delProductData(product);
-	File file= new File("E:\\eclipse-workspace\\eshop\\src\\main\\webapp\\resources\\product-images\\"+product.getProductId()+".jpg"); 
+	File file= new File("E:/eclipse-workspace/eshop/src/main/webapp/resources/product-images/"+product.getProductId()+".jpg"); 
 	  file.delete(); 
 	    return "redirect:ShowProduct";
 	    }
