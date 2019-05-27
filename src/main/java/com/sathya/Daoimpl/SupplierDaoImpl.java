@@ -18,7 +18,7 @@ import com.sathya.model.Supplier;
 public class SupplierDaoImpl {
 @Autowired
 SessionFactory sessionFactory;
-public void SupplierDaoAddData(Supplier supplier)
+public void supplierDaoAddData(Supplier supplier)
 {
 	
 	Session session=sessionFactory.openSession();

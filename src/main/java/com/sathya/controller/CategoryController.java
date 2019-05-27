@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sathya.Daoimpl.CategoryDaoImpl;
-import com.sathya.Daoimpl.TestingSessionfactory;
 import com.sathya.model.Category;
 
 @Controller
@@ -40,12 +39,12 @@ public class CategoryController
     	ModelAndView  mv=new ModelAndView("home");
         System.out.println(ca.getCategoryName());
         System.out.println(ca.getCategoryDiscription());
-      categoryDaoImpl.CategoryDao(ca);
+      categoryDaoImpl.categoryDao(ca);
      // mv.addObject("ButtonName","AddCategory");
         return mv;
     }
     @RequestMapping("ShowCat")
-    public ModelAndView RetrieveAllCategoryData()
+    public ModelAndView retrieveAllCategoryData()
     {
    List<Category> categoriesList=categoryDaoImpl.getCategoryData();
         ModelAndView  modelAndView=new ModelAndView("Showcategory");
@@ -57,7 +56,7 @@ public class CategoryController
     }
     
     @RequestMapping("/del")
-    public String DeleteCategoryData(@RequestParam("catId") int categoryId)
+    public String deleteCategoryData(@RequestParam("catId") int categoryId)
     {
     	
     	
@@ -69,7 +68,7 @@ public class CategoryController
         return "redirect:ShowCat";
     }
     @RequestMapping("/edit")
-    public ModelAndView EditCategoryData(@RequestParam("catId") int categoryId)
+    public ModelAndView editCategoryData(@RequestParam("catId") int categoryId)
     {
     	Category category= categoryDaoImpl.getCategory(categoryId);
     	categoryDaoImpl.editCategoryData(category);

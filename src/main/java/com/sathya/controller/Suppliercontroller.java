@@ -44,11 +44,11 @@ ModelAndView  mv=new ModelAndView("Supplier");
 		ModelAndView  mv=new ModelAndView("home");
 	    System.out.println(su.getSupplierName());
 		System.out.println(su.getSupplierDetails());
-		SupplierDaoImpl.SupplierDaoAddData(su);
+		SupplierDaoImpl.supplierDaoAddData(su);
 		return mv;
 	}
 	@RequestMapping("/ShowSupplierDetails")
-	public ModelAndView RetrieveAllSupplierData()
+	public ModelAndView retrieveAllSupplierData()
 	{
 List<Supplier> supplierlist = SupplierDaoImpl.getSupplierDaoRetriveData();
 ModelAndView modelAndView  =new ModelAndView("ShowSupplier");
@@ -57,7 +57,7 @@ modelAndView.addObject("suplist", supplierlist);
 	}
 	@RequestMapping("/sdel")
 	
-	public String DeleteCategoryData(@RequestParam("supId")int supplierId)
+	public String deleteCategoryData(@RequestParam("supId")int supplierId)
 	{
 	Supplier supplier=SupplierDaoImpl.getsupplier(supplierId);
 	SupplierDaoImpl.deletaSupplierData(supplier);

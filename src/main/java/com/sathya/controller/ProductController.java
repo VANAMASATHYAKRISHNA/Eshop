@@ -53,7 +53,7 @@ List<Supplier> supplierlist=	supplierDaoImpl.getSupplierDaoRetriveData();
 		return modelAndView;
 	}
 	@RequestMapping(value="/addpro",method=RequestMethod.POST)
-	public ModelAndView recieveCategoryFormData(@ModelAttribute("pro") Product product)
+	public ModelAndView recieveProductFormData(@ModelAttribute("pro") Product product)
     {
 		ModelAndView  modelAndView=new ModelAndView("home");
 		categoryDaoImpl.getCategoryData();
@@ -61,7 +61,7 @@ List<Supplier> supplierlist=	supplierDaoImpl.getSupplierDaoRetriveData();
 		MultipartFile imag =product.getProimg();
 		System.out.println("testing image="+imag);
 		try {
-			FileOutputStream fileOutputStream=new FileOutputStream("E:/eclipse-workspace/eshop/src/main/webapp/resources/product-images/"+product.getProductId()+".jpg");
+			FileOutputStream fileOutputStream=new FileOutputStream("E:\\eclipse-workspace\\eshop\\src\\main\\webapp\\resources\\product-images\\"+product.getProductId()+".jpg");
 			BufferedOutputStream bufferedOutputStream= new BufferedOutputStream(fileOutputStream);
 byte bytearray[]=imag.getBytes();
 bufferedOutputStream.write(bytearray);
@@ -98,12 +98,12 @@ bufferedOutputStream.write(bytearray);
 	    {
 	  Product product = productDaoImpl.getProduct(productId);
 	  productDaoImpl.delProductData(product);
-	File file= new File("E:/eclipse-workspace/eshop/src/main/webapp/resources/product-images/"+product.getProductId()+".jpg"); 
+	File file= new File("E:\\eclipse-workspace\\eshop\\src\\main\\webapp\\resources\\product-images\\"+product.getProductId()+".jpg"); 
 	  file.delete(); 
 	    return "redirect:ShowProduct";
 	    }
 	 @RequestMapping("/pedit")
-	 public ModelAndView editCategoryData(@RequestParam("proId") int productId)
+	 public ModelAndView editProductData(@RequestParam("proId") int productId)
 	 {
 		 Product product = productDaoImpl.getProduct(productId);
 		 productDaoImpl.editCategoryData(product);
@@ -118,7 +118,7 @@ bufferedOutputStream.write(bytearray);
 	 }
 	                              /*usermodule*/
 	 @RequestMapping("/user")
-	 public ModelAndView userproductData()
+	 public ModelAndView userProductData()
 		{
 		List<Product> productlist=productDaoImpl.getproductData();
 			ModelAndView  modelAndView=new ModelAndView("userproducts");

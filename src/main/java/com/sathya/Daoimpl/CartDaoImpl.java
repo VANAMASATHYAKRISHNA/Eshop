@@ -42,11 +42,6 @@ public List<Cart>	Displaycart()
 Session session = sessionFactory.openSession();
  Query query    =   session.createQuery("from Cart");
 List<Cart> cartlist= query.list();
-for(Cart cart:cartlist)
-{
-	System.out.println(cart.getCartid());
-	System.out.println(cart.getProductId());
-}
 session.close();
 return cartlist;
 }

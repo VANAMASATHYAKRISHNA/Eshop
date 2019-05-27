@@ -15,7 +15,7 @@ import com.sathya.model.Category;
 public class CategoryDaoImpl {
 @Autowired
 SessionFactory sessionFactory; 
-public void CategoryDao(Category c)
+public void categoryDao(Category c)
 {
 	Session s=sessionFactory.openSession();
 	if(c.getCategoryId()==0)

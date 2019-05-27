@@ -72,19 +72,17 @@ public ModelAndView afterloginfail()
 	return modelAndView;
 }
 @RequestMapping(value="/AfterLoginsucess")
-public String AfterAfterLoginsucess()
+public String afterLoginsucess()
 {
 	String pagename="";
 SecurityContext securityContext = SecurityContextHolder.getContext();
  Authentication authentication  = securityContext.getAuthentication();
      String nm=      authentication.getName();
-     System.out.println(nm);
- Collection<GrantedAuthority> grantedAuthorities=(Collection<GrantedAuthority>)authentication.getAuthorities();
-System.out.println(grantedAuthorities);
- for (GrantedAuthority grantedAuthority : grantedAuthorities) 
+     Collection<GrantedAuthority> grantedAuthorities=(Collection<GrantedAuthority>)authentication.getAuthorities();
+for (GrantedAuthority grantedAuthority : grantedAuthorities) 
  {
     String authority= grantedAuthority.getAuthority();
-    if(authority.equals("ROLE-USERE"))
+     if(authority.equals("ROLE-USER"))
     {
     pagename="userhome";
     return pagename;
